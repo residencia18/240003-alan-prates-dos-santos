@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/TechAdvocacia.API.props" />
+</Project>
