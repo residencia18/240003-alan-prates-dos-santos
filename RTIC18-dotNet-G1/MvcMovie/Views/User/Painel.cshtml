@@ -1,0 +1,43 @@
+@{
+    var userName = ViewBag.UserName;
+    ViewData["Title"] = "Painel";
+}
+
+<h1>Bem-vindo, @userName!</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Lista de Usuários</h5>
+                    <p class="card-text">Aqui você pode gerenciar os usuários cadastrados.</p>
+                    <a href="@Url.Action("Listagem", "User")" class="btn btn-primary">Ver Usuários</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Lista de Estúdios</h5>
+                    <p class="card-text">Aqui você pode gerenciar os estúdios cadastrados.</p>
+                    <a href="@Url.Action("ListagemEstudio", "User")" class="btn btn-primary">Ver Estúdios</a>
+                    <a href="@Url.Action("CadastroEstudio", "User")" class="btn btn-success ">Cadastrar Estúdio</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Lista de Artistas</h5>
+                    <p class="card-text">Aqui você pode gerenciar os artistas cadastrados.</p>
+                    <a href="@Url.Action("ListagemArtista", "User")" class="btn btn-primary">Ver Artistas</a>
+                    <a href="@Url.Action("CadastroArtista", "User")" class="btn btn-success">Cadastrar Artista</a>
+                </div>
+            </div>
+        </div>
+        <form asp-controller="User" asp-action="Logout" method="post">
+            <button type="submit" class="btn btn-primary">Sair</button>
+        </form>
+    </div>
+</div>

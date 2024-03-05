@@ -1,0 +1,41 @@
+@{
+    var userName = ViewBag.UserName;
+}
+
+<h1>Bem-vindo, @userName!</h1>
+
+<div class="text-center">
+    <h1>Lista de Usuários</h1>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th>Ações</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+                <td>@user.Password</td>
+                <td>
+                    <form asp-controller="User" asp-action="Excluir" method="post">
+                        <input type="hidden" name="userId" value="@user.Id" />
+                        <button type="submit" class="btn btn-danger">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form asp-controller="User" asp-action="Logout" method="post">
+    <button type="submit" class="btn btn-primary">Sair</button>
+    <a href="/User/Painel" class="btn btn-secondary">Voltar para a página Painel</a>
+</form>

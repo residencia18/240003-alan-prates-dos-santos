@@ -1,0 +1,28 @@
+@model MvcMovie.Models.Artista
+@{
+    ViewData["Title"] = "Cadastro de Artista";
+    var userName = ViewBag.UserName;
+}
+
+<h1>Bem-vindo, @userName!</h1>
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="User" asp-action="CadastroArtista" method="post" class="needs-validation" novalidate>
+    <div class="mb-3">
+        <label asp-for="Nome" class="form-label">Nome:</label>
+        <input asp-for="Nome" class="form-control" />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Biografia" class="form-label">Biografia:</label>
+        <input asp-for="Biografia" class="form-control" />
+        <span asp-validation-for="Biografia" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Site" class="form-label">Site:</label>
+        <input asp-for="Site" class="form-control" />
+        <span asp-validation-for="Site" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <a href="/User/Painel" class="btn btn-secondary">Voltar para a página Painel</a>
+</form>

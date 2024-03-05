@@ -1,0 +1,33 @@
+@model MvcMovie.Models.User
+
+<h1>Cadastro de Usuário</h1>
+
+<form asp-controller="User" asp-action="Cadastro" method="post" class="needs-validation" novalidate>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Nome:</label>
+        <input type="text" id="Name" name="Name" value="@Model.Name" class="form-control" required>
+        <div class="invalid-feedback">
+            O campo Nome é obrigatório.
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="Email" class="form-label">Email:</label>
+        <input type="email" id="Email" name="Email" value="@Model.Email" class="form-control" required>
+        <div class="invalid-feedback">
+            O campo Email é obrigatório.
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="Password" class="form-label">Senha:</label>
+        <input type="password" id="Password" name="Password" value="@Model.Password" class="form-control" required>
+        <div class="invalid-feedback">
+            O campo Senha é obrigatório.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-primary mr-2">Cadastrar</button>
+            <a href="/" class="btn btn-secondary">Voltar para a página inicial</a> <!-- Botão de voltar -->
+        </div>
+    </div>
+</form>
