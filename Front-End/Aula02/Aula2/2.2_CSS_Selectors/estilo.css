@@ -1,0 +1,25 @@
+/* Element Selector */
+h3 {
+    color: red;
+}
+
+/*class selector, pode ser aplicado em muitos elementos*/
+.header-verde {
+    color:green;
+}
+
+/* id selector, deve ser aplicado em apenas *1* elemento*/
+#proposto {
+    color:blue;
+}
+
+/*atribute selector, seleciona todos os elementos que tenham o atributo lang*/
+p[lang] {
+   color: black; 
+   font-family: "Open Sans", sans-serif; 
+}
+
+/*universal selector*/
+* {
+    background-color:antiquewhite;
+}

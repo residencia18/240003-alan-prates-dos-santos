@@ -1,0 +1,28 @@
+body{
+    background-color:antiquewhite;
+}
+h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    font-family: sans-serif;
+}
+h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-family:"Open Sans", sans-serif;
+}
+#sulbahia{
+    color: green;
+    font-family:"Open Sans", sans-serif;
+}
+#g1{
+    color: red;
+    font-family:"Open Sans", sans-serif;
+}
+
+.nots{
+    color: black;
+    font-family:"Open Sans", sans-serif;
+}

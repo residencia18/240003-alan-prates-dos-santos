@@ -1,0 +1,28 @@
+#p51{
+    border: 5px red solid;
+    border-width: 0px 5px 10px 50px;
+}
+
+#p47{
+    border: green solid;
+    border-width: 10px 50px;
+}
+
+#f4f3{
+    height: 250px;
+    width: 400px;
+    border: blue solid;
+    border-width: 50px;
+    padding: 30px;
+    
+}
+
+p{
+    border: black solid;
+    padding: 40px;
+    margin: 40px;
+}
+
+*{
+    background-color: bisque;
+}
